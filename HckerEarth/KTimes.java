@@ -4,7 +4,6 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.StringTokenizer;
  
- 
 class KTimes
 {
     static class FastReader
@@ -63,42 +62,27 @@ class KTimes
             return str;
         }
     }
-    
-    
+
+
     public static void main(String args[])
     {
         FastReader sc = new FastReader();
-        // Scanner sc = new Scanner(System.in);
-        // int test = sc.nextInt();
-        // for(int t = 0;t<test;t++)
-        // {
-            //number of elements
-            int n = sc.nextInt();
-            
-
-            //array to hold the count
-            //Java initializes it to 0
-            long[] arr = new long[n];
-            long[] count = new long[n];
-            
-            for(int i = 0;i<n;i++)
+        int n = sc.nextInt();
+        int[] count = new  int[n+1];
+        
+        for(int i = 0;i<n;i++)
+        {
+            int a = sc.nextInt();
+            count[a]++;
+        }   
+        int k = sc.nextInt();
+        for(int i = 0;i<n;i++)
+        {
+            if(count[i] == k)
             {
-                arr[i] = sc.nextLong();
-                count[(int)arr[i]]++;
-            }   
-            int k = sc.nextInt();
-            ArrayList<Long> al = new ArrayList<Long>();
-            for(int i = 0;i<n;i++)
-            {
-                if(count[i] == k)
-                {
-                    // System.out.println(arr[i]);
-                    al.add(arr[i]);
-                }
+                System.out.println(i);
+                break;
             }
-            Collections.sort(al);
-            System.out.println(al.get(0));
-
-        // }
+        }
     }
 }
