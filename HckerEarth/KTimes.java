@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.StringTokenizer;
  
  
-class Basic
+class KTimes
 {
     static class FastReader
     {
@@ -69,14 +69,36 @@ class Basic
     {
         FastReader sc = new FastReader();
         // Scanner sc = new Scanner(System.in);
-        int test = sc.nextInt();
-        for(int t = 0;t<test;t++)
-        {
-            if(System.out.println("hello world"))
+        // int test = sc.nextInt();
+        // for(int t = 0;t<test;t++)
+        // {
+            //number of elements
+            int n = sc.nextInt();
+            
+
+            //array to hold the count
+            //Java initializes it to 0
+            long[] arr = new long[n];
+            long[] count = new long[n];
+            
+            for(int i = 0;i<n;i++)
             {
-                int n = System.out.println("GG");
-                System.out.println(n);
+                arr[i] = sc.nextLong();
+                count[(int)arr[i]]++;
+            }   
+            int k = sc.nextInt();
+            ArrayList<Long> al = new ArrayList<Long>();
+            for(int i = 0;i<n;i++)
+            {
+                if(count[i] == k)
+                {
+                    // System.out.println(arr[i]);
+                    al.add(arr[i]);
+                }
             }
-        }
+            Collections.sort(al);
+            System.out.println(al.get(0));
+
+        // }
     }
 }
