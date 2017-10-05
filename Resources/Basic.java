@@ -72,11 +72,7 @@ class Basic
         int test = sc.nextInt();
         for(int t = 0;t<test;t++)
         {
-            if(System.out.println("hello world"))
-            {
-                int n = System.out.println("GG");
-                System.out.println(n);
-            }
+
         }
     }
 }
