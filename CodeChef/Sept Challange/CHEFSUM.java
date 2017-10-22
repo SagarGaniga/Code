@@ -76,7 +76,7 @@ class CHEFSUM
             int[] array = new int[n];
             int mini = 0;
             array[0] = sc.nextInt();
-            int min = array[0];
+            int min = array[0]; 
             int count = 0;
             for(int i = 1;i<n;i++)
             {
@@ -91,6 +91,7 @@ class CHEFSUM
 
             count+=min;
             System.out.println(mini+1);
+            
         }
     }
 }
