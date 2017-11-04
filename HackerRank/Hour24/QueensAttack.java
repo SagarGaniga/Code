@@ -135,6 +135,15 @@ class QueensAttack
         	{
         		// Only diagonal obstacle is possible now
 
+        		/*
+        		(y1-y2)/(x1-x2) is 1 or -1 if x1,y1 and x2,y2 is diagonal
+				it is basically angle of line between two coordinates
+        		*/
+        		
+        		if(((col_of_obstacle - col_of_queen) / (row_of_obstacle - row_of_queen)) == 1 || ((col_of_obstacle - col_of_queen) / (row_of_obstacle - row_of_queen)) == -1)
+        		{
+        			
+        		}
         		int queen_diff = abs(row_of_queen - col_of_queen);
         		int obstacle_diff = abs(row_of_obstacle - col_of_obstacle);
 
@@ -148,6 +157,9 @@ class QueensAttack
         		{
         			total = total - (Math.min(col_of_obstacle, row_of_obstacle));	
         		}
+
+
+
         	}
 
         } 

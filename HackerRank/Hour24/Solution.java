@@ -36,8 +36,10 @@ public class Solution {
                         r = co - cq - 1;
                 }
                 else{
-                    if((cq - co) < l || l == -1)
+                    if((cq - co) < l || l == -1){
+                        // System.out.println(cq);
                         l = cq - co - 1;
+                    }
                 }
             }
             else if(co == cq){
@@ -66,17 +68,19 @@ public class Solution {
                         dr = co - cq - 1;
                 }
                 else{
-                    if((cq - co) < ul || ul == -1)
+                    if((cq - co) < ul || ul ==  -1)
                         ul = cq - co - 1;
                 }
             }
         }
-        if(l == -1)
-            l = n - cq;
+        if(l == -1){
+            // System.out.println(rq);   
+            l = cq-1;
+        }
         if(u == -1)
             u = n - rq;
         if(r == -1)
-            r = cq - 1;
+            r = n -cq;
         if(d == -1)
             d = rq - 1;
         if(dl == -1)
@@ -87,16 +91,16 @@ public class Solution {
             dr = Math.min(n-cq,rq-1);
         if(ur == -1)
             ur = Math.min(n-cq,n-rq);
-        /*
-        System.out.println("u:"+u);
-        System.out.println("l:"+l);
-        System.out.println("r:"+r);
-        System.out.println("d:"+d);
-        System.out.println("ul:"+ul);
-        System.out.println("ur:"+ur);
-        System.out.println("dl:"+dl);
-        System.out.println("dr:"+dr);
-        */
+        
+        // System.out.println("u:"+u);
+        // System.out.println("l:"+l);
+        // System.out.println("r:"+r);
+        // System.out.println("d:"+d);
+        // System.out.println("ul:"+ul);
+        // System.out.println("ur:"+ur);
+        // System.out.println("dl:"+dl);
+        // System.out.println("dr:"+dr);
+        
         System.out.println(u+l+d+r+ul+ur+dl+dr);
     }
 }
